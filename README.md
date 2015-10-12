@@ -15,10 +15,10 @@ Install
 =======
 
 ##Bower
-bower install datepicker-moment
+`bower install datepicker-moment`
 
 ##NPM
-npm install datepicker-moment
+`npm install datepicker-moment`
 
 ----
 
