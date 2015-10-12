@@ -1,6 +1,8 @@
 $(function () {
     window.prettyPrint && window.prettyPrint();
-    moment.lang('en');
+
+    moment.locale('en');
+
     var model = {
         birthdayIso: ko.observable('1978-12-02'),
         birthdayFormat: ko.observable('2/12/78'),

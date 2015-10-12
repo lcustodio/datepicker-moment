@@ -2,7 +2,8 @@
  * MomentDatepicker 
  * Based on http://www.eyecon.ro/bootstrap-datepicker
  * =========================================================
- * Copyright 2012 Andres Moschini 
+ * Copyright 2015 Luis Custodio
+ * Copyright 2012 Andres Moschini
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +25,7 @@
     var Datepicker = function (element, options) {
         this.element = $(element);
         this.autoHide = true && (options.autoHide !== false) && (this.element.data('datepicker-autohide') !== false);
-        this.format = options.format || this.element.data('datepicker-format') || moment.langData().longDateFormat('L');
+        this.format = options.format || this.element.data('datepicker-format') || moment.localeData().longDateFormat('L');
         this.calendarPlacement = options.calendarPlacement || this.element.data('datepicker-calendarplacement') || 'right';
         this.picker = $(DPGlobal.template)
 							.appendTo('body')
@@ -211,7 +212,7 @@
         fillDow: function () {
             var dowCnt = this.weekStart;
             var html = '<tr>';
-            var daysMin = $.proxy(moment.langData().weekdaysMin, moment.langData());
+            var daysMin = $.proxy(moment.localeData().weekdaysMin, moment.localeData());
             while (dowCnt < this.weekStart + 7) {
                 html += '<th class="dow">' + daysMin(moment().day((dowCnt++) % 7)) + '</th>';
             }
@@ -222,7 +223,7 @@
         fillMonths: function () {
             var html = '';
             var i = 0
-            var monthsShort = $.proxy(moment.langData().monthsShort, moment.langData());
+            var monthsShort = $.proxy(moment.localeData().monthsShort, moment.localeData());
             while (i < 12) {
                 html += '<span class="month">' + monthsShort(moment().month(i++)) + '</span>';
             }
@@ -238,13 +239,13 @@
             var currentMonth = currentMoment ? currentMoment.month() : null;
 
             this.picker.find('.datepicker-days th:eq(1)')
-						.text(moment.langData().months(moment().month(month)) + ' ' + year);
+						.text(moment.localeData().months(moment().month(month)) + ' ' + year);
 
             var prevMonth = moment([year, month, 0]);
             prevMonth.day(prevMonth.day() - (prevMonth.day() - this.weekStart + 7) % 7);
 
             //TODO: use diff
-            var nextMonthVal = moment(prevMonth).add('days', 42).valueOf();
+            var nextMonthVal = moment(prevMonth).add(42, 'days').valueOf();
 
             html = [];
             var clsName;
@@ -271,7 +272,7 @@
                 if (prevMonth.day() === this.weekEnd) {
                     html.push('</tr>');
                 }
-                prevMonth.add('days', 1);
+                prevMonth.add(1, 'days');
             }
             this.picker.find('.datepicker-days tbody').empty().append(html.join(''));
 
@@ -322,7 +323,7 @@
                             case 'prev':
                             case 'next':
                                 var nav = DPGlobal.modes[this.viewMode];
-                                this.viewDate.add(nav.navFnc, nav.navStep * (target[0].className === 'prev' ? -1 : 1));
+                                this.viewDate.add(nav.navStep * (target[0].className === 'prev' ? -1 : 1), nav.navFnc);
                                 this.fill();
                                 this.refresh();
                                 break;
@@ -334,7 +335,7 @@
 
                                 var newMonth = target.parent().find('span').index(target);
                                 //this.viewDate.month(newMonth); I do not like how it works when the new month have less days
-                                this.viewDate.add('months', newMonth - this.viewDate.month());
+                                this.viewDate.add(newMonth - this.viewDate.month(), 'months');
 
                             } else {
                                 var year = parseInt(target.text(), 10) || 0;
@@ -355,9 +356,9 @@
                                 var day = parseInt(target.text(), 10) || 1;
                                 var tempDate = this.viewDate.clone();
                                 if (target.is('.old')) {
-                                    tempDate.startOf('month').add('days', -1);
+                                    tempDate.startOf('month').add(-1, 'days');
                                 } else if (target.is('.new')) {
-                                    tempDate.endOf('month').add('days', 1);
+                                    tempDate.endOf('month').add(1, 'days');
                                 }
                                 var month = tempDate.month();
                                 var year = tempDate.year();
