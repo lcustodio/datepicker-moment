@@ -1,4 +1,4 @@
-moment-datepicker
+datepicker-moment
 =================
 
 Datepicker built with [moment.js](http://momentjs.com/)
@@ -15,9 +15,11 @@ Install
 =======
 
 ##Bower
-coming...
+bower install datepicker-moment
 
 ##NPM
-coming...
+npm install datepicker-moment
+
+----
 
 Any contributions in order to make it agnostic of Twitter Bootstrap or Zurb Foundation are welcome.
