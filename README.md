@@ -1,11 +1,23 @@
 moment-datepicker
 =================
 
-The best bootstrap datepicker!
+Datepicker built with [moment.js](http://momentjs.com/)
 
-Original code from [Stefan Petre](http://www.eyecon.ro/bootstrap-datepicker/). I also took things from [Andrew Rowls](https://github.com/eternicode/bootstrap-datepicker) and [Aymeric Kodono](https://github.com/Aymkdn/Datepicker-for-Bootstrap).
+Original code from [Stefan Petre](http://www.eyecon.ro/bootstrap-datepicker/). 
+With contributions of
+[Andres Moschini](https://github.com/MakingSense/moment-datepicker)  
+[Andrew Rowls](https://github.com/eternicode/bootstrap-datepicker)
+[Aymeric Kodono](https://github.com/Aymkdn/Datepicker-for-Bootstrap).
+ 
+[Demo](http://lcustodio.github.com/moment-datepicker)
 
-Moment Datepicker is ready to work with Knockout, TypeScript and NuGet. It uses Moment.js to parse dates and to localize the literals, and Twitter-Bootstrap to ensure a nice appearance.
+Install
+=======
 
-* [Demo](http://makingsense.github.com/moment-datepicker)
-* [NuGet Package](https://nuget.org/packages/MomentDatepicker)
+##Bower
+coming...
+
+##NPM
+coming...
+
+Any contributions in order to make it agnostic of Twitter Bootstrap or Zurb Foundation are welcome.
