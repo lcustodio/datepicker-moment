@@ -4,10 +4,10 @@ moment-datepicker
 Datepicker built with [moment.js](http://momentjs.com/)
 
 Original code from [Stefan Petre](http://www.eyecon.ro/bootstrap-datepicker/). 
-With contributions of
-[Andres Moschini](https://github.com/MakingSense/moment-datepicker)  
-[Andrew Rowls](https://github.com/eternicode/bootstrap-datepicker)
-[Aymeric Kodono](https://github.com/Aymkdn/Datepicker-for-Bootstrap).
+With contributions from
+* [Andres Moschini](https://github.com/MakingSense/moment-datepicker)  
+* [Andrew Rowls](https://github.com/eternicode/bootstrap-datepicker)
+* [Aymeric Kodono](https://github.com/Aymkdn/Datepicker-for-Bootstrap).
  
 [Demo](http://lcustodio.github.com/moment-datepicker)
 
