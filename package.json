@@ -1,6 +1,6 @@
 {
   "name": "datepicker-moment",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A datepicker with the incredible moment.js",
   "main": "Gruntfile.js",
   "dependencies": {},
