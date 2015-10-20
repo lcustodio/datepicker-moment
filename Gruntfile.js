@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'moment-datepicker/moment-datepicker.min.css': ['moment-datepicker/*.css']
+          'moment-datepicker/moment-datepicker.min.css': ['moment-datepicker/*.css', '!moment-datepicker/*.min.css']
         }
       }
     },
@@ -19,12 +19,14 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'moment-datepicker/moment-datepicker.min.js': ['moment-datepicker/moment-datepicker.js']
+          'moment-datepicker/moment-datepicker.min.js': ['moment-datepicker/*.js', '!moment-datepicker/*.min.js']
         }
       }
     },
     jshint: {
-      files: ['Gruntfile.js', 'moment-datepicker/*.js'],
+      files: ['Gruntfile.js',
+              'moment-datepicker/*.js',
+              '!moment-datepicker/*.min.js'],
       options: {
         globals: {
           jQuery: true

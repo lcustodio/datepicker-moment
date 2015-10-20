@@ -222,7 +222,7 @@
 
         fillMonths: function () {
             var html = '';
-            var i = 0
+            var i = 0;
             var monthsShort = $.proxy(moment.localeData().monthsShort, moment.localeData());
             while (i < 12) {
                 html += '<span class="month">' + monthsShort(moment().month(i++)) + '</span>';
@@ -361,8 +361,8 @@
                                     tempDate.endOf('month').add(1, 'days');
                                 }
                                 var month = tempDate.month();
-                                var year = tempDate.year();
-                                this.set(moment([year, month, day]));
+                                var yearTemp = tempDate.year();
+                                this.set(moment([yearTemp, month, day]));
                             }
                         }
                         break;
@@ -477,4 +477,4 @@
 							'</div>' +
 						'</div>';
 
-}(this.jQuery, this.moment)
+}(this.jQuery, this.moment);
