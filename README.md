@@ -9,7 +9,7 @@ With contributions from
 * [Andrew Rowls](https://github.com/eternicode/bootstrap-datepicker)
 * [Aymeric Kodono](https://github.com/Aymkdn/Datepicker-for-Bootstrap).
  
-[Demo](http://lcustodio.github.com/moment-datepicker)
+[Demo](http://luiscustodio.com/datepicker-moment)
 
 Install
 =======

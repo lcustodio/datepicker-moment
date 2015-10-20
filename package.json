@@ -1,6 +1,6 @@
 {
   "name": "datepicker-moment",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A datepicker with the incredible moment.js",
   "main": "Gruntfile.js",
   "dependencies": {},
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lcustodio/moment-datepicker.git"
+    "url": "git+https://github.com/lcustodio/datepicker-moment.git"
   },
   "keywords": [
     "momentjs",
@@ -22,7 +22,7 @@
   "author": "Luis Custodio",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/lcustodio/moment-datepicker/issues"
+    "url": "https://github.com/lcustodio/datepicker-moment/issues"
   },
-  "homepage": "https://github.com/lcustodio/moment-datepicker#readme"
+  "homepage": "http://luiscustodio.com/datepicker-moment/"
 }

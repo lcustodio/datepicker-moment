@@ -10,7 +10,7 @@
             }
         }
         return null;
-    }
+    };
 
     detectDataType.isString = function (value) {
         return typeof value === 'string';
@@ -41,9 +41,9 @@
             },
             register: function (dataType) {
                 $el.data(elBinder.DATATYPE_KEY, dataType);
-            }                
-        }
-    }
+            }
+        };
+    };
     
     elBinder.DATATYPE_KEY = "datepicker.ko.dataType";
 
